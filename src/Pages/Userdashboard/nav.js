@@ -19,6 +19,7 @@ const Navi=()=>
                         <li class="nav-item">
                         <Link class="nav-link active" to='/profile'>Profile</Link>
                         </li>
+                        
                     </ul>
                 </div>
                 </div>
