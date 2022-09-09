@@ -79,47 +79,29 @@ function LoginPage(){
       });
     }
     return(
-      <div className="container">  
-<div className=" no-gutters shadow-lg">  
-
-<div className=" bg-white p-5">  
-<h3 className="pb-3">Login Form</h3>  
-<div className="form-style">  
-<form> 
-<div className="form-group pb-3">    
- <input type="name" placeholder="Name" className="form-control" id="exampleInputName1" aria-describedby="nameHelp" onBlur={WarningName} onChange={(e)=>setName(e.target.value)}/>
-                   <p className="text-danger">{checkName}</p>   
-</div>  
-
-<div className="form-group pb-3">    
- <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onBlur={WarningEmail} onChange={(e)=>setEmail(e.target.value)}/>
-                   <p className="text-danger">{checkEmail}</p>   
-</div>  
-<div className="form-group pb-3">    
- <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1" onBlur={WarningPass} onChange={(e)=>setPass(e.target.value)}/>  
- <p className="text-danger">
-      {checkPass}</p>
-</div>  
-<div className="d-flex align-items-center justify-content-between">  
-<div className="d-flex align-items-center"><input name="" type="checkbox" value="" /> <span class="pl-2 font-weight-bold">Remember Me</span></div>  
-<div><a href="#">Forget Password?</a></div>  
-</div>  
- <div className="pb-2">  
-<button type="submit" class="btn btn-dark w-100 font-weight-bold mt-2"><Link onClick={(e)=>handleSubmit(e)} className={flag?'btn btn-primary':'btn btn-primary disabled'} to= '/movies'>Login</Link></button>  
- </div>  
-</form>  
-<div className="sideline">OR</div>  
-<div>  
-<button type="submit" class="btn btn-primary w-100 font-weight-bold mt-2"><i className="fa fa-facebook" aria-hidden="true"></i> Login With Facebook</button>  
-</div>  
-<div className="pt-4 text-center">  
-Get Members Benefit. <Link to="/signup">Sign Up</Link>
-</div>  
-</div>  
-</div>  
-</div>  
-</div>  
+     
       
+
+
+      <div className="register-photo">
+<div className="form-container">
+<div className="image-holder"></div>
+<form method="post">
+<h2 className="text-center"><strong>Sign In</strong></h2>
+<div className="form-group"><input class="form-control" type="name" name="name" placeholder="Name"
+ onBlur={WarningName} onChange={(e)=>setName(e.target.value)}/></div>
+ <p className="text-danger">{checkName}</p>
+
+
+<div className="form-group"><input class="form-control" type="email" name="email" placeholder="Email"onBlur={WarningEmail} onChange={(e)=>setEmail(e.target.value)}/></div>
+<p className="text-danger">{checkEmail}</p>
+<div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password" onBlur={WarningPass} onChange={(e)=>setPass(e.target.value)} /></div>
+<p className="text-danger">{checkPass}</p>
+<Link onClick={(e)=>handleSubmit(e)} className={flag?'btn btn-primary':'btn btn-primary disabled'} to= '/movies'>Login</Link><a class="already" href="#">Don't have an account?<Link to="/signup">  
+SignUp here.</Link> </a>
+</form>
+</div>
+</div> 
      
 
   )

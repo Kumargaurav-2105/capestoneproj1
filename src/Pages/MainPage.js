@@ -1,4 +1,4 @@
-import React from 'react'
+import React  ,{useState}from 'react'
 import { useSelector } from 'react-redux';
 import Carousel from 'better-react-carousel'
 import Navbar from '../Components/Navbar';
@@ -6,8 +6,16 @@ import "../CSS/Search.css"
 import Footer from '../Components/Footer';
 
 const MainPage = () => {
+  const{jobdata}=useSelector((state)=>state.login.jobdata)
+  const[search,setsearch]=useState('')
+  const searchitem=(e)=>
+    {
+        e.preventDefault();
+        setsearch(e.target.value)
+        console.log(search)
+    }
   return(
-    <div>
+    <div> 
       <Navbar></Navbar>
       <Carousel cols={1} rows={1} gap={5} loop>
       <Carousel.Item>
@@ -20,7 +28,7 @@ const MainPage = () => {
         <img width="102%" height="400"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMsMH4UfNE9SlvygNdxezLPaZ3LTC0nca4UBkT9aY1kshAkvr5RDdmJ6MZrieCBeyZL20&usqp=CAU" />
       </Carousel.Item>
     </Carousel>
-    <div class="container"> <div class="search"> <div class="row"> <div class="col-md-6"> <div class="search-1"> <i class='bx bx-search-alt'></i> <input type="text" placeholder="Search by Place"/> </div> </div> <div class="col-md-6"> <div> <div class="search-2"> <i class='bx bxs-map' ></i> <input type="text" placeholder="Search by Name"/> <button>Search</button> </div> </div> </div> </div> </div>
+    <div class="container"> <div class="search"> <div class="row"> <div class="col-md-6"> <div class="search-1"> <i class='bx bx-search-alt'></i> <input type="text" placeholder="Search by Place"/> </div> </div> <div class="col-md-6"> <div> <div class="search-2"> <i class='bx bxs-map' ></i> <input type="text" placeholder="Search by Name" /> <button onChange={(e)=>searchitem(e)}>Search</button> </div> </div> </div> </div> </div>
 </div>
 <Footer></Footer>
 

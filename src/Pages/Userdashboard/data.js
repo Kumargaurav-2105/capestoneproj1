@@ -7,7 +7,8 @@ const data=[
         "skillsets": ["C", "C++", "Javascript"],
         "jobType": "Internship",
         "duration": 2,
-        "salary": 4000
+        "salary": 4000,
+        "status":false
     },
     {
         "title": "Web Development(Full Time)",
@@ -17,7 +18,8 @@ const data=[
         "skillsets": ["PHP", "Django"],
         "jobType": "Full Time",
         "duration": 0,
-        "salary": 5000
+        "salary": 5000,
+        "status":false
     },
     {
         "title": "Full Stack Intern",
@@ -27,7 +29,9 @@ const data=[
         "skillsets": ["ReactJS", "NodeJS", "Express"],
         "jobType": "Internship",
         "duration": 5,
-        "salary": 4500
+        "salary": 4500,      
+          "status":false
+
     }
 ]
 export default data

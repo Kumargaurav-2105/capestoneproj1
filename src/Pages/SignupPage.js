@@ -106,10 +106,10 @@ onBlur={WarningPhone} onChange={(e)=>setPhone(e.target.value)}></input>
                 </label>
               </div>
 
-<div class="form-group">
-<div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox"/>I agree to the license terms.</label></div>
+<div className="form-group">
+<div className="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox"/>I agree to the license terms.</label></div>
 </div>
-<div class="form-group"><button class="btn btn-success btn-block" type="submit" onClick={(e)=>handleSubmit(e)}>Sign Up</button></div><a class="already" href="#">You already have an account?<Link to="/login">
+<div className="form-group"><button class="btn btn-success btn-block" type="submit" onClick={(e)=>handleSubmit(e)}>Sign Up</button></div><a class="already" href="#">You already have an account?<Link to="/login">
 Login here.</Link> </a>
 </form>
 </div>
